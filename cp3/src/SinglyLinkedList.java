@@ -22,8 +22,16 @@ public class SinglyLinkedList<E>{
 	//access method
 	public int size(){return size;}	//return list size
 	public boolean isEmpty(){return size == 0;}
-	public Node<E> first(){return head;}
-	public Node<E> last(){return tail;}
+
+	//why not return head or tail node?????
+	public E first(){
+		if(isEmpty()) return null;
+		return head.getElement();
+	}
+	public E last(){
+		if(isEmpty()) return null;
+		return tail.getElement();
+	}
 
 	//update method
 	public void addFirst(E e){

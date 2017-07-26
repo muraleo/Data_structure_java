@@ -13,7 +13,8 @@ public class ArrayStack<E> implements Stack<E>{
 	//access method
 	public int size(){return t+1;}
 	public boolean isEmpty(){return t==(-1);}
-	public void push(E e){
+	public void push throw IllegalStateException(E e){
+		if(siez() == CAPACITY) throw IllegalStateException("Stack is full!");
 		data[++t] = e;
 	}
 	public E pop(){

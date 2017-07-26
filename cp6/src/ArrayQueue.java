@@ -15,7 +15,7 @@ public class ArrayQueue<E> implements Queue<E>{
 	public boolean isEmpty(){return sz==0;}
 	public void enqueue(E e) throws IllegalStateException{ //throws
 		if(sz == data.length) throw new IllegalStateException("Queue is full"); //throw
-		data[(f+1)%data.length] = e;
+		data[(f+sz)%data.length] = e;
 		sz++;
 	}
 

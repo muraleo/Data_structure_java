@@ -19,7 +19,8 @@ public class ArrayList<E> implements List<E>{
 	}
 	public void add(int i, E e) throws IndexOutOfBoundsException, IllegalStateException{
 		checkIndex(i, size+1); // size+1
-		if(size == CAPACITY) throw new IllegalStateException("List is full.");
+		//if(size == CAPACITY) throw new IllegalStateException("List is full.");
+		if(size == CAPACITY) resize(2*CAPACITY);
 		for(int k = size-1;k>=i;k--){
 				data[k+1] = data[k];
 			}

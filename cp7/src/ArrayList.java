@@ -51,4 +51,13 @@ public class ArrayList<E> implements List<E>{
 		//remember new!
 		if(i<0 || i>=n) throw new IndexOutOfBoundsException("illegal index: "+i);
 	}
+
+	//resize method for dynamic array
+	protected void resize(int capacity){
+		E[] temp = (E []) new Object[capacity];
+		for(int i=0; i<size; i++){
+			temp[i] = data[k];
+		}
+		data = temp;
+	}
 }
